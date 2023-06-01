@@ -5,3 +5,7 @@ kubectl apply -f dashboard-deployment.yml
 kubectl apply -f dashboard-service-account-user.yml
 
 kubectl apply -f dashboard-rbac-cluster-role-binding.yml
+
+echo "admin_user token:"
+
+kubectl -n kubernetes-dashboard create token admin-user
